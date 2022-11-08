@@ -1,11 +1,18 @@
-import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
+import {StyleSheet, Text, View, TouchableNativeFeedback} from 'react-native';
 const BookTile = (props)=> {
     return(
-    <View style={styles.tile}>
-        <View style={styles.tileDetail}>
-          <Text style={styles.tileHeader}>{props.title}</Text>
+    <View>
+        <View>
+          <TouchableNativeFeedback onPress={() => console.log("klik")}>
+            <Text style={styles.tileHeader}>{props.title}</Text>
+          </TouchableNativeFeedback>
           <Text style={styles.tileAuthor}>{props.author}</Text>
-          <Text style={styles.tileText}>{props.subTitle}</Text>
+          <View style={styles.gelijkstaan}>
+            <Text style={styles.tileText}>{props.subTitle}</Text>
+            <TouchableNativeFeedback onPress={() => console.log("gelezen")}>
+              <Text style={styles.tileButton}>Read me!</Text>
+            </TouchableNativeFeedback>
+          </View>
         </View>
       </View>
     );
@@ -21,8 +28,19 @@ const styles = StyleSheet.create({
   tileAuthor:{
     fontSize:17,
     fontWeight: "500",
+    fontStyle: "italic",
   },
   tileText:{
     fontSize:12,
   },
+  gelijkstaan:{
+    flex:1,
+    flexDirection:"row",
+  },
+  tileButton:{
+    backgroundColor: "#fff",
+    position: "absolute",
+    right:20,
+    padding:5,
+  }
 });
