@@ -23,6 +23,6 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   tileText:{
-    color: '#FF0000',
+    fontSize:12,
   },
 });
