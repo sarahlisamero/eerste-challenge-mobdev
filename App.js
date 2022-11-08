@@ -13,18 +13,24 @@ export default function App() {
         </View>
       </View>
       <View style={styles.container}>
+        <View style={styles.tilesContainer}>
         <BookTile 
         title="De wereld van Sofie" 
         author="Jostein Gaarder"
         subTitle="ISBN: 1234"/>
+        </View>
+        <View style={styles.tilesContainer}>
         <BookTile 
-        title="De wereld van Sofie" 
-        author="Jostein Gaarder"
+        title="Oneindige schildpadden" 
+        author="John Green"
         subTitle="ISBN: 1234"/>
+        </View>
+        <View style={styles.tilesContainer}>
         <BookTile 
-        title="De wereld van Sofie" 
-        author="Jostein Gaarder"
+        title="Matilda" 
+        author="Roald Dhal"
         subTitle="ISBN: 1234"/>
+        </View>
       </View>
       <View>
         <StatusBar style="auto" />
@@ -42,14 +48,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     paddingTop: 40,
   },
-  /*tilesContainer: {
-    flex: 1,
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    flexGrow: 0,
-    flexShrink: 0,
-    justifyContent: 'space-evenly',
-  },*/
+  tilesContainer: {
+    backgroundColor:"#dedede", 
+    marginBottom:20,
+    marginLeft:20,
+    marginRight:20,
+    paddingLeft:15,
+    paddingTop:15,
+    paddingBottom:15
+  },
   icon:{
     width:35,
     height:35,
