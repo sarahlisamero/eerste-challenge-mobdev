@@ -4,33 +4,25 @@ const BookTile = (props)=> {
     <View style={styles.tile}>
         <View style={styles.tileDetail}>
           <Text style={styles.tileHeader}>{props.title}</Text>
+          <Text style={styles.tileAuthor}>{props.author}</Text>
           <Text style={styles.tileText}>{props.subTitle}</Text>
         </View>
       </View>
     );
 }
+
+export default BookTile; 
+
 const styles = StyleSheet.create({
-    heading1:{
-        fontSize: 30,
-        fontWeight: "500",
-    },
-    container: {
-      backgroundColor: '#fff',
-      paddingTop: 56,
-    },
-    tilesContainer: {
-      flex: 1,
-      flexDirection: 'row',
-      flexWrap: 'wrap',
-      flexGrow: 0,
-      flexShrink: 0,
-      justifyContent: 'space-evenly',
-    },
-    tileHeader:{
-      color: '##FF0000',
-    },
-    tileText:{
-      color: '#FF0000',
-    }
+  tileHeader:{
+    fontSize:20,
+    fontWeight: "600",
+  },
+  tileAuthor:{
+    fontSize:17,
+    fontWeight: "500",
+  },
+  tileText:{
+    color: '#FF0000',
+  },
 });
-export default BookTile(); 
